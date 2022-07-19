@@ -1,0 +1,30 @@
+﻿<Window x:Class="СофтТрейдПлюс.Form.ClientForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:СофтТрейдПлюс.Form"
+        mc:Ignorable="d"
+        Title="Client" Height="450" Width="800">
+    <Grid x:Name="ClientGrid">
+        <!--// Верхний колонтитул //-->
+        <Image HorizontalAlignment="Left" Height="60" Margin="10,5,0,0" VerticalAlignment="Top" Width="60" Source="/Resourses/logo.png"/>
+        <Image HorizontalAlignment="Right" Height="40" Margin="0,10,10,0" VerticalAlignment="Top" Width="40" Source="/Resourses/Profile.png" MinHeight="40" MinWidth="40"/>
+
+        <Rectangle HorizontalAlignment="Stretch" Height="1" Margin="0,70,0,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Left" Height="72" Margin="80,-1,0,0" Stroke="Black" VerticalAlignment="Top" Width="185"/>
+
+        <Label Content="Софт Трейд Плюс" HorizontalAlignment="Left" Margin="80,20,0,0" VerticalAlignment="Top" FontSize="20" Width="185" FontWeight="Bold"/>
+        <Label Content="Admin" HorizontalAlignment="Right" Margin="0,45,8,0" VerticalAlignment="Top"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Click="CloseForm_Click" Width="100" Height="50"/>
+        <!--// Конец //-->
+        <Grid>
+            <DataGrid x:Name="ClientDataGrid" Margin="0,140,0,0" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False"/>
+            <Button Content="Добавить" HorizontalAlignment="Left" Margin="120,80,0,0" VerticalAlignment="Top" Click="ClientInsertForm_Click" Width="100" Height="50"/>
+            <Button Content="Изменить" HorizontalAlignment="Left" Margin="230,80,0,0" VerticalAlignment="Top" Click="ClientUpdateForm_Click" Width="100" Height="50"/>
+            <Button Content="Удалить" HorizontalAlignment="Left" Margin="340,80,0,0" VerticalAlignment="Top" Click="ClientDeleteForm_Click" Width="100" Height="50"/>
+            <Button Content="Обновить" HorizontalAlignment="Left" Margin="450,80,0,0" VerticalAlignment="Top" Click="Update_Click" Width="100" Height="50"/>
+            <Button Content="Поиск продаж" HorizontalAlignment="Left" Margin="560,80,0,0" VerticalAlignment="Top" Click="ClientFindForm_Click" Width="100" Height="50"/>
+        </Grid>
+    </Grid>
+</Window>

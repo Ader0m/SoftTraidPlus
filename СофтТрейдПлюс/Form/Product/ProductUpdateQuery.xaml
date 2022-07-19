@@ -1,0 +1,45 @@
+﻿<Window x:Class="СофтТрейдПлюс.Form.ProductUpdateQuery"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:СофтТрейдПлюс.Form"
+        mc:Ignorable="d"
+        Title="ProductUpdateQuery" Height="313" Width="800">
+    <Grid>
+        <!--// Верхний колонтитул //-->
+        <Image HorizontalAlignment="Left" Height="60" Margin="10,5,0,0" VerticalAlignment="Top" Width="60" Source="/Resourses/logo.png"/>
+        <Image HorizontalAlignment="Right" Height="40" Margin="0,10,10,0" VerticalAlignment="Top" Width="40" Source="/Resourses/Profile.png" MinHeight="40" MinWidth="40"/>
+
+        <Rectangle HorizontalAlignment="Stretch" Height="1" Margin="0,70,0,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Left" Height="72" Margin="80,-1,0,0" Stroke="Black" VerticalAlignment="Top" Width="185"/>
+
+        <Label Content="Софт Трейд Плюс" HorizontalAlignment="Left" Margin="80,20,0,0" VerticalAlignment="Top" FontSize="20" Width="185" FontWeight="Bold"/>
+        <Label Content="Admin" HorizontalAlignment="Right" Margin="0,45,8,0" VerticalAlignment="Top"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Click="CloseForm_Click" Width="100" Height="50"/>
+        <!--// Конец //-->
+
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="112,140,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="256,140,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Тип" HorizontalAlignment="Left" Margin="393,140,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Продолжительность" HorizontalAlignment="Left" Margin="531,140,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+        <TextBox x:Name="NameTextBox" Margin="112,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18" HorizontalAlignment="Left"/>
+        <TextBox x:Name="PriceTextBox" Margin="256,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18" HorizontalAlignment="Left"/>
+
+        <ComboBox x:Name="TypeComboBox" Margin="393,170,0,0" VerticalAlignment="Top" Width="120" FontSize="16" HorizontalAlignment="Left" SelectionChanged="TypeComboBox_SelectionChanged">
+            <ComboBoxItem>Подписка</ComboBoxItem>
+            <ComboBoxItem>Постоянная лицензия</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="TermComboBox" HorizontalAlignment="Left" Margin="552,170,0,0" VerticalAlignment="Top" Width="120" FontSize="16">
+            <ComboBoxItem>Месяц</ComboBoxItem>
+            <ComboBoxItem>Квартал</ComboBoxItem>
+            <ComboBoxItem>Год</ComboBoxItem>
+        </ComboBox>
+
+        <Button Content="Обновить" HorizontalAlignment="Right" Margin="0,80,10,0" VerticalAlignment="Top" Click="UpdateQuery_Click" Width="100" Height="50"/>
+        <DataGrid x:Name="ProductDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,0,10,10" VerticalAlignment="Bottom" Height="46" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="IdComboBox" Margin="10,170,0,0" VerticalAlignment="Top" Width="55" FontSize="16" HorizontalAlignment="Left" SelectionChanged="IDComboBox_SelectionChanged"/>
+    </Grid>
+</Window>

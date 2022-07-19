@@ -1,0 +1,43 @@
+﻿<Window x:Class="СофтТрейдПлюс.Form.ClientInsertQuery"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:СофтТрейдПлюс.Form"
+        mc:Ignorable="d"
+        Title="ClientInsertQuery" Height="240" Width="800">
+    <Grid x:Name="GridInsertQuery" Margin="0,0,0,4">
+        <!--// Верхний колонтитул //-->
+        <Image HorizontalAlignment="Left" Height="60" Margin="10,5,0,0" VerticalAlignment="Top" Width="60" Source="/Resourses/logo.png"/>
+        <Image HorizontalAlignment="Right" Height="40" Margin="0,10,10,0" VerticalAlignment="Top" Width="40" Source="/Resourses/Profile.png" MinHeight="40" MinWidth="40"/>
+
+        <Rectangle HorizontalAlignment="Stretch" Height="1" Margin="0,70,0,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Left" Height="72" Margin="80,-1,0,0" Stroke="Black" VerticalAlignment="Top" Width="185"/>
+
+        <Label Content="Софт Трейд Плюс" HorizontalAlignment="Left" Margin="80,20,0,0" VerticalAlignment="Top" FontSize="20" Width="185" FontWeight="Bold"/>
+        <Label Content="Admin" HorizontalAlignment="Right" Margin="0,45,8,0" VerticalAlignment="Top"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Click="CloseForm_Click" Width="100" Height="50"/>
+        <!--// Конец //-->
+
+        <Grid x:Name="BodyQuery">
+            <Label Content="Имя" HorizontalAlignment="Left" Margin="61,142,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.909,0.513"/>
+            <Label Content="Тип" HorizontalAlignment="Left" Margin="269,142,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="ID Сотрудника" HorizontalAlignment="Left" Margin="389,142,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Юр. лицо" HorizontalAlignment="Left" Margin="510,144,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Контакт" HorizontalAlignment="Left" Margin="595,144,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+            <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="61,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="18"/>
+            <TextBox x:Name="ContactTextBox" HorizontalAlignment="Right" Margin="0,172,50,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="18" IsReadOnly="True"/>
+
+            <ComboBox x:Name="StateComboBox" HorizontalAlignment="Left" Margin="269,172,0,0" VerticalAlignment="Top" Width="120" FontSize="16">
+                <TextBlock> Ключевой</TextBlock>
+                <TextBlock> Стандартный</TextBlock>
+            </ComboBox>
+            <ComboBox x:Name="IdManagerComboBox" HorizontalAlignment="Left" Margin="394,172,0,0" VerticalAlignment="Top" Width="80" FontSize="16"/>
+            
+            <CheckBox x:Name="EntityCheckBox" Content="" HorizontalAlignment="Left" Margin="540,180,0,0" VerticalAlignment="Top" Checked="EntityCheckBox_Checked" Unchecked="EntityCheckBox_Unchecked"/>
+
+            <Button Content="Добавить" HorizontalAlignment="Right" Margin="0,80,10,0" VerticalAlignment="Top" Click="InsertQuery_Click" Width="100" Height="50"/>
+        </Grid>
+    </Grid>
+</Window>
